@@ -23,3 +23,13 @@ This project is a full-fledged e-commerce application built using the MERN (Mong
 - Admin dashboard
 - Order tracking system
 - Reviews and ratings
+
+# Milestone 1
+
+* Completed foundation for E-commerce Application
+
+# Milestone 2
+
+* Separate folders for frontend and backend.
+* A functional Login Page in the frontend.
+* Completed setting for tailwind-css.
