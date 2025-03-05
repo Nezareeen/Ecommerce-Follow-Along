@@ -33,3 +33,9 @@ This project is a full-fledged e-commerce application built using the MERN (Mong
 * Separate folders for frontend and backend.
 * A functional Login Page in the frontend.
 * Completed setting for tailwind-css.
+
+# Milestone 3
+
+* Organized the **backend folder structure** for scalability.
+* Connected the **server to MongoDB** using Mongoose.
+* Implemented **error-handling middleware** for API stability.
