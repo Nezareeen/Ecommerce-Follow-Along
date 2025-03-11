@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const schema = mongoose.schema({
-    name:{type:string,required:true},
-    email:{type:string,required:true},
-    password:{type:string,required:true},
-    image:{type:string}
-})
+const schema = new mongoose.Schema({ // Corrected: mongoose.Schema (capital S)
+  name: { type: String, required: true }, // Corrected: String (capital S)
+  email: { type: String, required: true }, // Corrected: String (capital S)
+  password: { type: String, required: true }, // Corrected: String (capital S)
+  image: { type: String } // Corrected: String (capital S)
+});
 
-const usermodel = mongoose.model("users",schema);
+const usermodel = mongoose.model("users", schema);
 
-module.exports = {usermodel}
+module.exports = { usermodel }; // Corrected: Object syntax

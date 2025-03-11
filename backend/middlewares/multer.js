@@ -10,6 +10,6 @@ const storage = multer.diskStorage({
     }
   })
   
-  const uploadUserImage = multer({ storage: storage1 })
+  const uploadUserImage = multer({ storage: storage })
 
   module.exports = uploadUserImage;
