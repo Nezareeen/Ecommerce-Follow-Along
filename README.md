@@ -45,3 +45,8 @@ This project is a full-fledged e-commerce application built using the MERN (Mong
 * Created the **user model** in Mongoose to define user data structure.
 * Developed the **user controller** to manage the user authentication (signup,login).
 * Implemented **Multer for file handling**, allowing user profile and product image uploads.
+
+# Milestone 5
+
+* Created the **Sign up page** in react and added code for signup in backend also.
+* Added the **Sign up page** validation in (Signup, login).
