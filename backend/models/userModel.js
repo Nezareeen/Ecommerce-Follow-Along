@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
-const schema = new mongoose.Schema({ // Corrected: mongoose.Schema (capital S)
-  name: { type: String, required: true }, // Corrected: String (capital S)
-  email: { type: String, required: true }, // Corrected: String (capital S)
-  password: { type: String, required: true }, // Corrected: String (capital S)
-  image: { type: String } // Corrected: String (capital S)
-});
+const schema = mongoose.Schema({
+    name:{type:String,required:true},
+    email:{type:String,required:true},
+    password:{type:String,required:true},
+    image:{type:String}
 
-const usermodel = mongoose.model("users", schema);
+}) 
 
-module.exports = { usermodel }; // Corrected: Object syntax
+const userModel = mongoose.model("users",schema);
+
+module.exports = {userModel}

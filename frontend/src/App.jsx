@@ -1,19 +1,26 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import Products from './components/Products'
+import { BrowserRouter } from 'react-router-dom'
+import AllRouting from './AllRouting'
+import Navbar from './components/Navbar'
+
 
 function App() {
+  
 
   return (
     <>
-      <Login/>
-      <br />
-      <h2>Or</h2>
-      <br />
-      <h1>Sign up</h1>
-      <br />
-      <Signup/>
+    <BrowserRouter>
+    <Navbar/>
+    <AllRouting/>
+    
+    </BrowserRouter>
+      
     </>
   )
 }

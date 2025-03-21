@@ -1,25 +1,39 @@
-const express = require("express");
+const express = require("express")
+
 const app = express();
+app.use(express.json());
+
+const dotenv = require("dotenv");
+dotenv.config();
+
+const cors = require("cors");
+app.use(cors());
+
 const connect = require("./mongoDB");
 const userRouter = require("./controller/userRouter");
 
-app.get("/",(request,response)=>{
-    try{
-        response.status(200).send({msg:"E-commerce code along backend"});
-    }
-    catch (error) {
-        response.status(500).send({msg:"Something went wrong"});
+const productRouter = require("./controller/productRouter");
+ 
+app.get("/",(req,res)=>{
+    try {
+        res.status(200).send({mgs:"This is e-commerce code along backend"});
+    } catch (error) {
+        res.status(500).send({message:"error occured"});
     }
 })
 
-app.use("./user",userRouter)
+//localhost:8000/user/login
+
+app.use("/user",userRouter);
+
+app.use("/product",productRouter);
+
 
 app.listen(8000,async()=>{
-    try{
+    try {
         await connect();
-        console.log("Server connected");
-    }
-    catch (error) {
-        console.log("Server not connected",error);
+        console.log("Server connected successfully");
+    } catch (error) {
+        console.log("Error",error)
     }
 })

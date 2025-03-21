@@ -1,11 +1,5 @@
-body{
-    background-image: url('https://i.pinimg.com/736x/b6/d9/12/b6d9120fd5a1cfe068992bfd2ec203e8.jpg');
-    color:rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-input{
-    border-width: 3px;
-    background-color: white;
-    color: black;
+form{
+    border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
 }

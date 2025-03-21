@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
-async function connect() {
-    try {
-       await mongoose.connect("mongodb+srv://nezareeen:2gj4mJ2VXzYqDdFH@cluster0.6svfy.mongodb.net/");
+async function connect(){
+    try{
+        await mongoose.connect("mongodb+srv://rekhansikagoluguri07:radh%40krishna_123@cluster0.zk6ur.mongodb.net/")
+
+    }catch(error){
+        console.log("Mongo bd error",error);
     }
-    catch (error){
-        console.log("MongoDB error",error);
-    }
+    
 }
 
 module.exports = connect;

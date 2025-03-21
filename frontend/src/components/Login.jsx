@@ -1,46 +1,40 @@
 import React, { useState } from 'react'
-import './Login.css'
+import "./Login.css"
 
 const Login = () => {
-
     const[loginData,setLoginData] = useState({
         email:"",
-        password:"",
+        password:""
     })
 
     function handleInput(e){
-        setLoginData({...loginData,[e.target.name]:e.target.value})
+        setLoginData({...loginData,[e.target.name]:e.target.name})
     }
+
 
     function handleLogin(event){
         event.preventDefault();
-        if(!loginData.email){
+        if(loginData.email==""){
             alert("Please enter email...");
             return;
         }
 
-        if(!loginData.password){
-            alert("Please enter Password...");
+        if(loginData.password==""){
+            alert("Please enter password...");
             return;
         }
 
-        alert("Youre successfully logged in!!");
+        alert("You are successfully logged in");
     }
-    
   return (
-    <div className='body'>
-        <h1>Sign in</h1>
-        <form onSubmit={handleLogin}>
-            <label htmlFor="">Enter Email</label>
-            <br />
-            <input type="email" value={loginData.email} name='email' onChange={handleInput} placeholder='Email...' />
-            <br />
-            <label htmlFor="">Enter Password</label>
-            <br />
-            <input type="password" value={loginData.password} name='password' onChange={handleInput} placeholder='Password...'/>
-            <br />
-            <input type="submit" />
-        </form>
+    <div>
+      <form onSubmit={handleLogin}>
+        <label htmlFor="">Email</label>
+        <input type="email" value={loginData.email} name='email' onChange={handleInput} placeholder='Email...'/>
+        <label>password</label>
+        <input type="password" value={loginData.password} name="password" onChange={handleInput} placeholder='password...'/>
+        <input type="submit"/>
+      </form>
     </div>
   )
 }
