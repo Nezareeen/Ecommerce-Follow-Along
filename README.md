@@ -78,3 +78,9 @@ Completed foundation for your E-Commerce Application.
 
 * Created Product Update EndPoint for updating products.
 * Created Form for updating data in frontend and also created auto-fill function.
+
+# Milestone 14
+
+* Created product delete endpoint for updating products.
+* Created form for Deleting product in the frontend.
+
