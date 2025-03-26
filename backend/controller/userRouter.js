@@ -1,7 +1,7 @@
 const express = require("express");
 const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
-const { userImage } = require("../middleware/multer");
+const { userImage } = require("../middlewares/multer");
 const jwt = require('jsonwebtoken');
 
 const userRouter = express.Router();
@@ -43,8 +43,8 @@ userRouter.post("/signup", async (req, res) => {
                 password: hashedPassword, 
                 image: imageUrl 
             });
+            const token = jwt.sign({ name:newUser.name,email:newUser.email,id:newUser.id }, process.env.JWT_PASSWORD);
 
-            const token = jwt.sign({ name:newUser.name, email:newUser.email, id:newUser.id }, process.env.JWT_PASSWORD);
             return res.status(201).json({ message: "User registered successfully", token:token });
         });
     } catch (error) {
@@ -72,7 +72,7 @@ userRouter.post("/login", async (req, res) => {
         const matchedPass = bcrypt.compareSync(password, user.password);
 
         if (matchedPass) {
-            const token = jwt.sign({ name:user.name, email:user.email, id:user.id }, process.env.JWT_PASSWORD);
+            const token = jwt.sign({ name:user.name,email:user.email,id:user.id }, process.env.JWT_PASSWORD);
             return res.status(200).json({ message: "User logged in successfully",token });
         } else {
             return res.status(401).json({ message: "Invalid email or password" });

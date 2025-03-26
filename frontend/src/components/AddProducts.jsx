@@ -10,7 +10,7 @@ const AddProduct = () => {
         <input type="text" name={"title"} placeholder="Enter title..." />
         <input type="text" name={"description"} placeholder="Enter description..." />
         <select name="" id="" onChange={(event)=>{
-            console.log(event.target.value,noOfImages)yryryyryyyryyryyisuhfuh    psurhf
+            console.log(event.target.value,noOfImages);
             setNoOfImages(new Array(parseInt(event.target.value)).fill(1));
         }}>
             <option value="1">1</option>

@@ -9,6 +9,10 @@ dotenv.config();
 const cors = require("cors");
 app.use(cors());
 
+var jwt = require('jsonwebtoken');
+
+const userModel = require("./models/userModel")
+
 const connect = require("./mongoDB");
 const userRouter = require("./controller/userRouter");
 
@@ -26,7 +30,24 @@ app.get("/",(req,res)=>{
 
 app.use("/user",userRouter);
 
-app.use("/product",productRouter);
+app.use("/product",async(req,res,next)=>{
+    try {
+        const auth = req.headers.authorization;
+        if(!auth){
+            return res.status(401).send({msg:"Please login"});
+        }
+        var decoded = jwt.verify(token,process.env.JWT_PASSWORD);
+        const user  = await userModel.findOne({_id:decoded.id});
+        if(!user){
+            return res.status(401).send({msg:"Please register first"});
+        }
+
+        console.log(decoded); 
+        next();
+    } catch (error) {
+        return res.status(500).send({msg:"Something went wrong"});
+    }
+},productRouter);
 
 
 app.listen(8000,async()=>{

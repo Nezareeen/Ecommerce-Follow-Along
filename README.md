@@ -71,5 +71,10 @@ Completed foundation for your E-Commerce Application.
 
 # Milestone 12
 
-* Created Product Page for dynamic products presentation according to user mail.
-* Added the backend part for specific user products.
+* Created ProductPage for dynamic product presentation according to user mail.
+* Created backend for specific user products.
+
+# Milestone 13
+
+* Created Product Update EndPoint for updating products.
+* Created Form for updating data in frontend and also created auto-fill function.
