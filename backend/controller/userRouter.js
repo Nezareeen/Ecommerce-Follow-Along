@@ -44,10 +44,6 @@ userRouter.post("/signup", async (req, res) => {
                 image: imageUrl 
             });
             const token = jwt.sign({ name:newUser.name,email:newUser.email,id:newUser.id }, process.env.JWT_PASSWORD);
-<<<<<<< HEAD
-=======
-
->>>>>>> 60b3bee21789212dd37d314d2ab0a434541f33fe
             return res.status(201).json({ message: "User registered successfully", token:token,name,id:newUser.id });
         });
     } catch (error) {

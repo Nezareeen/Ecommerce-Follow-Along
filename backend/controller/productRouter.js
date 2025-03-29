@@ -3,7 +3,6 @@ const productRouter = express.Router();
 const productModel = require("../models/productModel");
 const { productImages } = require("../middleware/multer");
 
-<<<<<<< HEAD
 
 const uploadImages = (req, res, next) => {
     
@@ -11,18 +10,6 @@ const uploadImages = (req, res, next) => {
         const { title, description, price } = req.body;
         if (!title || !description || !price) {
             return res.status(400).json({ msg: "Please fill all fields" });
-=======
-const productModel = require("../models/productModel");
-
-const productImages = require("../middleware/multer");
-
-var jwt = require('jsonwebtoken');
-
-productRouter.post("/addproduct",async(req,res,next)=>{
-    productImages.array("images",6)(req,res,(err)=>{
-        if(err){
-            return res.status(500).send({msg:"Something went wrong while uploading images"});
->>>>>>> 60b3bee21789212dd37d314d2ab0a434541f33fe
         }
         if (err) {
             return res.status(400).json({ msg: "File upload error", error: err.message });
@@ -34,7 +21,6 @@ productRouter.post("/addproduct",async(req,res,next)=>{
 
 productRouter.post("/addproduct", uploadImages, async (req, res) => {
     try {
-<<<<<<< HEAD
         const { title, description, price } = req.body;
 
         // Validate required fields BEFORE processing images
@@ -60,23 +46,6 @@ productRouter.post("/addproduct", uploadImages, async (req, res) => {
         await newProduct.save();
 
         return res.status(201).json({ msg: "Product added successfully", images: imageUrls });
-=======
-        const {title,description,price} = req.body;
-        const auth = req.headers.authorization;
-        var decoded = jwt.verify(token,process.env.JWT_PASSWORD);
-        if(!title || !description || !price){
-            return res.status(404).send({msg:"Please fill all fields"});
-        }
-
-        const images = req.files;
-        const imageLinkArray = [];
-        console.log(images)
-        images.forEach((ele)=>{
-            imageLinkArray.push("http://localhost:8000/uploads/images");
-        })
->>>>>>> 60b3bee21789212dd37d314d2ab0a434541f33fe
-
-        return res.status(200).send({msg:"Product added sucessfully"});
 
     } catch (error) {
         console.error("Error in adding product:", error);
