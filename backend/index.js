@@ -72,7 +72,7 @@ app.use("/uploads",express.static(path.join(__dirname,"uploads")));
 
 app.listen(PORT,async ()=>{
     try {
-       await mongoose.connect(`mongodb+srv://nezareeen:${MONGO_PASSWORD}@cluster0.7uqfa9u.mongodb.net/`);
+       await mongoose.connect(`mongodb+srv://abhishektiwari136136:${MONGO_PASSWORD}@cluster0.55lt4.mongodb.net/`);
        console.log("Connected sucessfully");
     } catch (error) {
         console.log("Something went wrong not able to connect to server",error);
