@@ -116,3 +116,12 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 ✅ created route for Add Address Page in Frontend.
 ✅ create form for adding address.
 ✅ stored address using useState Hook.
+
+### **🛠️ Milestone 22: Created Backend for Address and attached with fronted**
+✅ created backend endpoint for handeling address.
+✅ added backend endpoint with frontend.
+
+### **🛠️ Milestone 23 worked on address in frontend and backend
+✅ created placeorder button in cart page and added navigation to select address
+✅ created select address page and provided option to select one address.
+✅created backend endpoint to sent all address to user.

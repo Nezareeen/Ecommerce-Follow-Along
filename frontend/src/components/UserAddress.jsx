@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import axios from "axios"
 const UserAddress = () => {
     const [address,setAddress] = useState({
         country:"",
@@ -9,14 +9,38 @@ const UserAddress = () => {
         zipCode:""
     });
 
-    function handleAddressForm(event){
+
+    async function postAddress(event){
         event.preventDefault();
-        console.log(address);
+        try {
+            const userData = JSON.parse(localStorage.getItem("follow-along-auth-token-user-name-id")) || [];
+            if(!userData.id){
+                alert("please login first");
+                return;
+            }
+            const {country,city,address1,address2,zipCode} = address;
+            if(!country || !city || !address1 ||!address2 || !zipCode){
+                alert("fill every fields");
+                return;
+            }
+            const sendAddress = await axios.post(`http://localhost:8080/address`
+                ,address,
+                {headers: { 
+                    "Authorization": userData.token 
+                }}
+            );
+
+            alert("address updated sucessfully");
+        } catch (error) {
+            alert("Something went wrong");
+            console.log(error);
+        }
     }
+
   return (
     <div>
         <form action=""
-        onSubmit={handleAddressForm}
+        onSubmit={postAddress}
         style={{
             display:"flex",
             flexDirection:"column",
