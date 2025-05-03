@@ -140,3 +140,6 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 ### **🛠️ Milestone 26: worked on order backend and email service**
 ✅ Implemented mail with nodemailer.
 ✅ Sending order details to user via email.
+
+### **🛠️ Milestone 27: Worked on frontend for my order page**
+✅ Created a get request to get for my orders.
