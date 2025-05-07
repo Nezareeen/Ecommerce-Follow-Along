@@ -9,7 +9,7 @@ const userRouter = express.Router();
 
 userRouter.post("/signup", async (req, res) => {
     try {
-
+        
         userImage.single("image")(req, res, async (err) => {
             if (err) {
                 console.log(err)
@@ -21,12 +21,13 @@ userRouter.post("/signup", async (req, res) => {
             if (!name || !email || !password) {
                 return res.status(400).json({ message: "All details are required" });
             }
-
+            
             const userExists = await userModel.findOne({ email });
+            console.log("first",userExists)
             if (userExists) {
                 return res.status(400).json({ message: "User Already Registered" });
             }
-
+            
             // Hash password securely
             const saltRounds = 10;
             const hashedPassword = await bcrypt.hash(password, saltRounds);
