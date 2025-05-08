@@ -155,4 +155,8 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 
 ### **🛠️ Milestone 29 Payment
 
-✅ Integrated dummy payment
+✅ Integrated dummy payment.
+
+### **🛠️ Milestone 30 Payment
+
+✅ Worked on payment page.
