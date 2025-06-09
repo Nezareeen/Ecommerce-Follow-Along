@@ -25,32 +25,24 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 ✅ Set up a basic server in **Node.js** using **Express.js**.  
 ✅ Configured **environment variables** for secure credentials.  
 
----
-
 ### **🛠️ Milestone 2: Structuring the Project & UI Setup**  
 ✅ **Separated frontend and backend folders** for modular development.  
 ✅ Created a **functional login page** in the frontend using React.js.  
 ✅ Installed and configured **Tailwind CSS** for responsive UI design.  
-
----
 
 ### **🛠️ Milestone 3: Backend Configuration & Database Connection**  
 ✅ Organized the **backend folder structure** for scalability.  
 ✅ Connected the **server to MongoDB** using Mongoose.  
 ✅ Implemented **error-handling middleware** for API stability.  
 
----
-
 ### **🛠️ Milestone 4: User Management & File Handling**  
 ✅ Created the **User Model** in Mongoose to define user data structure.  
 ✅ Developed the **User Controller** to manage user authentication (signup, login).  
 ✅ Implemented **Multer for file handling**, allowing user profile and product image uploads. 
 
-
 ### **🛠️ Milestone 5: User Registration & File Handling**  
 ✅ Created the **Sign up page** in React and added code for signup backend also.  
 ✅ Added the **Sign up page** validation in (signup, login).   
-
 
 ### **🛠️ Milestone 6: Password Hashing By Using Bcryptjs**  
 ✅ added the **password encryption**  in backend signup page.  
@@ -62,7 +54,6 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 
 ### **🛠️ Milestone 8: Product Page In Frontend**  
 ✅ added the **Product Page**  in Frontend as a Homepage.  
-
 
 ### **🛠️ Milestone 9: Created Form For Product Upload**  
 ✅ Created the **AddProducts** page  in Frontend.  
@@ -96,7 +87,6 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 ✅ Created **Product Details** for showing full product details in details page.
 ✅ Added Add to cart button with quantity selection.
 
-
 ### **🛠️ Milestone 17:  CRUD for cart** 
 ✅ Create endpoints in backend ***CRUD*** for handling cart.
 ✅ Handaled quantity for product in cart.
@@ -121,47 +111,49 @@ Ecommerce-Follow-Along is a full-fledged **E-Commerce Application** built using 
 ✅ created backend endpoint for handeling address.
 ✅ added backend endpoint with frontend.
 
-### **🛠️ Milestone 23 worked on address in frontend and backend
+### **🛠️ Milestone 23 worked on address in frontend and backend**
 ✅ created placeorder button in cart page and added navigation to select address
 ✅ created select address page and provided option to select one address.
 ✅created backend endpoint to sent all address to user.
 
-### **🛠️ Milestone 24 worked on address in frontend and backend
-
+### **🛠️ Milestone 24 worked on address in frontend and backend**
 ✅ Displayed all of products in cart.
 ✅ Displayed All address in address selection page.
 ✅ Displayed total price in cart.
 ✅ Added place order button at the bottom.
 
-### **🛠️ Milestone 25 worked on order backend and email service
-
+### **🛠️ Milestone 25 worked on order backend and email service**
 ✅ created endpoint for order.
 ✅ implemented mail service from nodemailer.
 ✅ handled address for the delivery.
 
-### **🛠️ Milestone 26 worked on order backend and email service
-
+### **🛠️ Milestone 26 worked on order backend and email service**
 ✅ Implemented mail with nodemailer.
 ✅ Sending order details to user via mail.
 
-### **🛠️ Milestone 27 worked on frontend for my order page
-
+### **🛠️ Milestone 27 worked on frontend for my order page**
 ✅ created get request to get request my orders
 
-### **🛠️ Milestone 28 cancel order payment
+### **🛠️ Milestone 28 cancel order payment**
+✅ Added cancel order functionality
+✅ created endpointpoint for payment id
 
-✅ added cancel order functionality
-✅ created endpoint for payemnt id
-
-### **🛠️ Milestone 29 Payment
-
+### **🛠️ Milestone 29 payment**
 ✅ Integrated dummy payment.
 
-### **🛠️ Milestone 30 Payment
-
+### **🛠️ Milestone 30 payment**
 ✅ Worked on payment page.
 
-### **🛠️ Milestone 31 Redux Implementation
+### **🛠️ Milestone 31 Redux Implementation**
+✅ Implemented Redux in frontend
+✅ used redux in User details page.
 
-✅ Implemented redux in frontend.
-✅ Used redux in user details page.
+### **🛠️ Milestone 32 Redux Implementation**
+✅ Implemented Redux in frontend
+
+### **🛠️ Milestone 33 setting up token in cookies**
+✅ Implemented cookies auth by using cookie-parser npm package
+✅ added cookie by login page.
+
+### **🛠️ Milestone 34 setting up token in cookies**
+✅ implemented token and cookies in frontend and backend both
